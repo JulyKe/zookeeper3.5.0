@@ -1,0 +1,325 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/huanke/Documents/zookeeper-3.5.0-alpha/build/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/huanke/Documents/zookeeper-3.5.0-alpha/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2017-06-15 18:38:42,582 [myid:] - INFO  [main:QuorumPeerConfig@109] - Reading configuration from: conf/zoo1.cfg
+2017-06-15 18:38:42,586 [myid:] - WARN  [main:VerifyingFileFactory@55] - conf/zoo1.cfg is relative. Prepend ./ to indicate that you're sure!
+2017-06-15 18:38:42,586 [myid:] - WARN  [main:VerifyingFileFactory@55] - data/data1 is relative. Prepend ./ to indicate that you're sure!
+2017-06-15 18:38:42,587 [myid:] - WARN  [main:VerifyingFileFactory@55] - log/log1 is relative. Prepend ./ to indicate that you're sure!
+2017-06-15 18:38:42,591 [myid:] - WARN  [main:QuorumPeerConfig@445] - No server failure will be tolerated. You need at least 3 servers.
+2017-06-15 18:38:42,595 [myid:1] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2017-06-15 18:38:42,595 [myid:1] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2017-06-15 18:38:42,595 [myid:1] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2017-06-15 18:38:42,605 [myid:1] - INFO  [main:QuorumPeerMain@136] - Starting quorum peer
+2017-06-15 18:38:42,615 [myid:1] - INFO  [main:NIOServerCnxnFactory@670] - Configuring NIO connection handler with 10s sessionless connection timeout, 1 selector thread(s), 8 worker threads, and 64 kB direct buffers.
+2017-06-15 18:38:42,623 [myid:1] - INFO  [main:NIOServerCnxnFactory@683] - binding to port /0.0.0.0:2181
+2017-06-15 18:38:42,657 [myid:1] - INFO  [main:Slf4jLog@67] - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-06-15 18:38:42,687 [myid:1] - INFO  [main:QuorumPeer@1205] - Local sessions disabled
+2017-06-15 18:38:42,687 [myid:1] - INFO  [main:QuorumPeer@1216] - Local session upgrading disabled
+2017-06-15 18:38:42,687 [myid:1] - INFO  [main:QuorumPeer@1185] - tickTime set to 2000
+2017-06-15 18:38:42,687 [myid:1] - INFO  [main:QuorumPeer@1227] - minSessionTimeout set to 4000
+2017-06-15 18:38:42,689 [myid:1] - INFO  [main:QuorumPeer@1238] - maxSessionTimeout set to 40000
+2017-06-15 18:38:42,689 [myid:1] - INFO  [main:QuorumPeer@1253] - initLimit set to 10
+2017-06-15 18:38:42,706 [myid:1] - INFO  [main:QuorumPeer@671] - currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2017-06-15 18:38:42,710 [myid:1] - INFO  [main:QuorumPeer@686] - acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2017-06-15 18:38:42,713 [myid:1] - INFO  [main:Slf4jLog@67] - jetty-6.1.26
+2017-06-15 18:38:42,742 [myid:1] - WARN  [main:Slf4jLog@76] - failed SocketConnector@0.0.0.0:8080: java.net.BindException: Address already in use
+2017-06-15 18:38:42,742 [myid:1] - WARN  [main:Slf4jLog@76] - failed Server@637719cf: java.net.BindException: Address already in use
+2017-06-15 18:38:42,745 [myid:1] - WARN  [main:QuorumPeer@650] - Problem starting AdminServer
+org.apache.zookeeper.server.admin.AdminServer$AdminServerException: Problem starting AdminServer on port 8080, command URL /commands
+	at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:89)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.start(QuorumPeer.java:648)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.runFromConfig(QuorumPeerMain.java:171)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:120)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:79)
+Caused by: java.net.BindException: Address already in use
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:376)
+	at java.net.ServerSocket.bind(ServerSocket.java:376)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at java.net.ServerSocket.<init>(ServerSocket.java:181)
+	at org.mortbay.jetty.bio.SocketConnector.newServerSocket(SocketConnector.java:80)
+	at org.mortbay.jetty.bio.SocketConnector.open(SocketConnector.java:73)
+	at org.mortbay.jetty.AbstractConnector.doStart(AbstractConnector.java:283)
+	at org.mortbay.jetty.bio.SocketConnector.doStart(SocketConnector.java:147)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.mortbay.jetty.Server.doStart(Server.java:235)
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:50)
+	at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:85)
+	... 4 more
+org.apache.zookeeper.server.admin.AdminServer$AdminServerException: Problem starting AdminServer on port 8080, command URL /commands
+2017-06-15 18:38:42,750 [myid:1] - INFO  [QuorumPeerListener:QuorumCnxManager$Listener@550] - My election bind port: /127.0.0.1:3891
+2017-06-15 18:38:42,760 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumPeer@913] - LOOKING
+2017-06-15 18:38:42,761 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@888] - New election. My id =  1, proposed zxid=0x0
+2017-06-15 18:38:42,773 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@682] - Notification: 2 (message format version), 0 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 0 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)100000000 (n.config version)
+2017-06-15 18:38:42,773 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@682] - Notification: 2 (message format version), 1 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)100000000 (n.config version)
+2017-06-15 18:38:42,774 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@682] - Notification: 2 (message format version), 1 (n.leader), 0x0 (n.zxid), 0x1 (n.round), LOOKING (n.state), 0 (n.sid), 0x0 (n.peerEPoch), LOOKING (my state)100000000 (n.config version)
+2017-06-15 18:38:42,979 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:MBeanRegistry@119] - Unregister MBean [org.apache.ZooKeeperService:name0=ReplicatedServer_id1,name1=replica.1,name2=LeaderElection]
+2017-06-15 18:38:42,979 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumPeer@1001] - LEADING
+2017-06-15 18:38:42,985 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Leader@62] - TCP NoDelay set to: true
+2017-06-15 18:38:42,985 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Leader@82] - zookeeper.leader.maxConcurrentSnapshots = 10
+2017-06-15 18:38:42,985 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Leader@84] - zookeeper.leader.maxConcurrentSnapshotTimeout = 5
+2017-06-15 18:38:43,010 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:zookeeper.version=3.5.0-alpha--1, built on 06/15/2017 21:34 GMT
+2017-06-15 18:38:43,010 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:host.name=10.150.115.189
+2017-06-15 18:38:43,011 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:java.version=1.7.0_79
+2017-06-15 18:38:43,011 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:java.vendor=Oracle Corporation
+2017-06-15 18:38:43,011 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre
+2017-06-15 18:38:43,011 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:java.class.path=/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/classes:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/slf4j-log4j12-1.7.5.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/slf4j-api-1.7.5.jar:/Users/huanke/Documents/zookeeper-3.5.0-a2017-06-15 18:38:43,011 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Environment@109] - Server environment:java.class.path=/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/classes:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/slf4j-log4j12-1.7.5.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/slf4j-api-1.7.5.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/servlet-api-2.5-20081211.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/netty-3.7.0.Final.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/log4j-1.2.16.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/jline-2.11.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/jetty-util-6.1.26.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/jetty-6.1.26.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/javacc.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/jackson-mapper-asl-1.9.11.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/jackson-core-asl-1.9.11.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../build/lib/commons-cli-1.2.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../lib/slf4j-log4j12-1.7.5.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../lib/slf4j-api-1.7.5.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../lib/servlet-api-2.5-20081211.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../lib/netty-3.7.0.Final.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../lib/log4j-1.2.16.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../lib/jline-2.11.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../lib/jetty-util-6.1.26.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../lib/jetty-6.1.26.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../lib/javacc.jar:/Users/huanke/Documents/zookeeper-3.5.0-alpha/bin/../2017-06-15 18:38:43,011 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:java.library.path=/Users/huanke/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-06-15 18:38:43,011 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:java.io.tmpdir=/var/folders/9q/xhccn3lx735g55snp9vml5zr0000gq/T/
+2017-06-15 18:38:43,011 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:java.compiler=<NA>
+2017-06-15 18:38:43,011 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:os.name=Mac OS X
+2017-06-15 18:38:43,011 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:os.arch=x86_64
+2017-06-15 18:38:43,011 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:os.version=10.10.5
+2017-06-15 18:38:43,012 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:user.name=huanke
+2017-06-15 18:38:43,012 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:user.home=/Users/huanke
+2017-06-15 18:38:43,012 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:user.dir=/Users/huanke/Documents/zookeeper-3.5.0-alpha
+2017-06-15 18:38:43,012 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:os.memory.free=103MB
+2017-06-15 18:38:43,012 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:os.memory.max=889MB
+2017-06-15 18:38:43,012 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@109] - Server environment:os.memory.total=123MB
+2017-06-15 18:38:43,015 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:ZooKeeperServer@781] - minSessionTimeout set to 4000
+2017-06-15 18:38:43,015 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:ZooKeeperServer@790] - maxSessionTimeout set to 40000
+2017-06-15 18:38:43,015 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:ZooKeeperServer@152] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir log/log1/version-2 snapdir data/data1/version-2
+2017-06-15 18:38:43,021 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Leader@409] - LEADING - LEADER ELECTION TOOK - 42
+2017-06-15 18:38:43,023 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:FileTxnSnapLog@298] - Snapshotting: 0x0 to data/data1/version-2/snapshot.0
+2017-06-15 18:38:44,038 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@361] - Follower sid: 0 : info : 127.0.0.1:2890:3890:participant;0.0.0.0:2180
+2017-06-15 18:38:44,042 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@665] - Synchronizing with Follower sid: 0 maxCommittedLog=0x0 minCommittedLog=0x0 lastProcessedZxid=0x0 peerLastZxid=0x0
+2017-06-15 18:38:44,042 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@709] - Sending DIFF zxid=0x0 for peer sid: 0
+2017-06-15 18:38:44,043 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@407] - @hkS-LearnerHandler needSnap is false
+2017-06-15 18:38:44,044 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 13
+2017-06-15 18:38:44,044 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 10
+2017-06-15 18:38:44,063 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Leader@1243] - Have quorum of supporters, sids: [ [0, 1] ]; starting up and setting last processed zxid: 0x100000000
+2017-06-15 18:38:44,091 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:CommitProcessor@253] - Configuring CommitProcessor with 4 worker threads.
+2017-06-15 18:38:44,132 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 12
+2017-06-15 18:38:44,133 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@515] - @hkR-LearnerHandler received ACK message
+2017-06-15 18:38:45,134 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:38:45,135 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:38:46,140 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:38:46,141 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:38:47,145 [myid:1] - INFO  [Sender-/127.0.2017-06-15 18:38:47,146 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:2017-06-15 18:38:47,146 [myid:1] - INFO  [LearnerHandler-/1272017-06-15 18:38:48,151 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:38:49,151 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:38:50,157 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:38:51,162 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:38:51,661 [myid:0] - INFO  [NIOServerCxnFactory.AcceptThread:/0.0.0.0:2180:NIOServerCnxnFactory$AcceptThread@296] - Accepted socket connection from /127.0.0.1:50449
+2017-06-15 18:38:51,672 [myid:0] - INFO  [NIOWorkerThread-1:NIOServerCnxn@835] - Processing srvr command from /127.0.0.1:50449
+2017-06-15 18:38:51,680 [myid:0] - INFO  [NIOWorkerThread-1:NIOServerCnxn@1006] - Closed socket connection for client /127.0.0.1:50449 (no session established for client)
+2017-06-15 18:38:52,164 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:38:53,166 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:38:54,171 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:38:55,176 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:38:56,181 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:38:57,183 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:38:58,184 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:38:59,187 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:00,190 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:01,195 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:02,201 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:03,201 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:04,205 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:05,207 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:06,210 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:07,211 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:08,213 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:09,217 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:10,219 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:11,225 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:12,230 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:13,235 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:14,237 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:15,240 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:16,243 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:17,248 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:18,253 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:19,253 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:20,254 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:21,260 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:22,262 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:23,266 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:24,271 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:25,274 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:26,279 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:27,280 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:28,285 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:29,290 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:30,295 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:31,301 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:32,306 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:33,312 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:34,317 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:35,318 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:36,323 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:37,328 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:38,334 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:39,339 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:40,339 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:41,345 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:42,350 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:43,350 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:44,351 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:45,351 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:46,357 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:47,360 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:48,365 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:49,366 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:50,371 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:51,377 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:52,382 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:53,387 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:54,391 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:55,397 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:56,401 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:57,407 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:58,412 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:39:59,413 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:00,414 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:01,419 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:02,421 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:03,426 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:04,431 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:05,436 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:06,437 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:07,442 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:08,444 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:09,446 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:10,452 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:11,457 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:12,461 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:13,462 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:14,463 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:15,469 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:16,474 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:17,480 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:18,485 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:19,490 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:20,492 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:21,494 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:22,499 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:23,505 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:24,510 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+2017-06-15 18:40:25,511 [myid:0] - INFO  [QuorumPeer[myid=0]/0:0:0:0:0:0:0:0:2180:Follower@115] - @hkR-processPacket PING message
+  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:36,323 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:37,328 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:37,329 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:38,333 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:38,334 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:39,339 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:39,340 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:40,339 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:40,340 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:41,344 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:41,345 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:42,350 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:42,351 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:43,350 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:43,350 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:44,350 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:44,351 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:45,351 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:45,351 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:46,356 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:46,357 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:47,359 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:47,360 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:48,364 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:48,365 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:49,365 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:49,366 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:50,371 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:50,372 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:51,376 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:51,377 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:52,381 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:52,382 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:53,387 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:53,388 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:54,391 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:54,392 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:55,396 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:55,397 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:56,401 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:56,401 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:56,462 [myid:1] - INFO  [NIOServerCxnFactory.AcceptThread:/0.0.0.0:2181:NIOServerCnxnFactory$AcceptThread@296] - Accepted socket connection from /127.0.0.1:50460
+2017-06-15 18:39:56,463 [myid:1] - INFO  [NIOWorkerThread-2:NIOServerCnxn@835] - Processing srvr command from /127.0.0.1:50460
+2017-06-15 18:39:56,463 [myid:1] - INFO  [NIOWorkerThread-2:NIOServerCnxn@1006] - Closed socket connection for client /127.0.0.1:50460 (no session established for client)
+2017-06-15 18:39:57,406 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:57,407 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:58,411 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:58,412 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:39:59,413 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:39:59,414 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:00,413 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:00,414 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:01,419 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:01,419 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:02,420 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:02,421 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:03,425 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:03,426 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:04,431 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:04,432 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:05,435 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:05,436 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:06,436 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:06,437 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:07,441 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:07,442 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:08,444 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:08,445 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:09,446 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:09,447 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:10,451 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:10,452 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:11,456 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:11,457 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:12,460 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:12,461 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:13,461 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:13,462 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:14,463 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:14,464 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:15,468 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:15,469 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:16,474 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:16,475 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:17,479 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:17,480 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:18,484 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:18,485 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:19,490 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:19,491 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:20,492 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:20,493 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:21,494 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:21,495 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:22,499 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:22,500 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:23,504 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:23,505 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:24,509 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:24,510 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:25,510 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 5
+2017-06-15 18:40:25,511 [myid:1] - INFO  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@525] - @hkR-LearnerHandler received PING message
+2017-06-15 18:40:26,469 [myid:1] - ERROR [LearnerHandler-/127.0.0.1:50448:LearnerHandler@586] - Unexpected exception causing shutdown while sock still open
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.jute.BinaryInputArchive.readInt(BinaryInputArchive.java:63)
+	at org.apache.zookeeper.server.quorum.QuorumPacket.deserialize(QuorumPacket.java:83)
+	at org.apache.jute.BinaryInputArchive.readRecord(BinaryInputArchive.java:103)
+	at org.apache.zookeeper.server.quorum.LearnerHandler.run(LearnerHandler.java:496)
+2017-06-15 18:40:26,469 [myid:1] - WARN  [RecvWorker:0:QuorumCnxManager$RecvWorker@836] - Connection broken for id 0, my id = 1, error = 
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$RecvWorker.run(QuorumCnxManager.java:821)
+2017-06-15 18:40:26,469 [myid:1] - WARN  [LearnerHandler-/127.0.0.1:50448:LearnerHandler@601] - ******* GOODBYE /127.0.0.1:50448 ********
+2017-06-15 18:40:26,469 [myid:1] - WARN  [RecvWorker:0:QuorumCnxManager$RecvWorker@839] - Interrupting SendWorker
+2017-06-15 18:40:26,470 [myid:1] - INFO  [Sender-/127.0.0.1:50448:LearnerHandler@225] - @hkS-Leader sendPackets()  message 0
+2017-06-15 18:40:26,470 [myid:1] - WARN  [SendWorker:0:QuorumCnxManager$SendWorker@753] - Interrupted while waiting for message on queue
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2017)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2095)
+	at java.util.concurrent.ArrayBlockingQueue.poll(ArrayBlockingQueue.java:389)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.pollSendQueue(QuorumCnxManager.java:905)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.access$500(QuorumCnxManager.java:62)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$SendWorker.run(QuorumCnxManager.java:741)
+2017-06-15 18:40:26,470 [myid:1] - WARN  [SendWorker:0:QuorumCnxManager$SendWorker@762] - Send worker leaving thread  id 0 my id = 1
